@@ -1,6 +1,7 @@
 import { NgModule, isDevMode } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
+import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
@@ -11,6 +12,7 @@ import { CounterDisplayComponent } from "./components/counter-display/counter-di
 import { CustomIncrementComponent } from "./components/custom-increment/custom-increment.component";
 import { MaterialModule } from "./material/material.module";
 import { counterReducer } from "./store/counter.reducers";
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { counterReducer } from "./store/counter.reducers";
     CounterButtonComponent,
     CounterDisplayComponent,
     CustomIncrementComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({ firstReducerProvider: counterReducer }),
     BrowserAnimationsModule,
+    FormsModule,
     MaterialModule,
     StoreDevtoolsModule.instrument({
       maxAge: false, // Retains last 25 states

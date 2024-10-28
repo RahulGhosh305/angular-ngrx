@@ -1,12 +1,12 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
 import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
+  MatToolbarModule,
 } from "@angular/material";
 
 @NgModule({
@@ -18,7 +18,7 @@ import {
     MatCardModule,
     MatSelectModule,
     MatFormFieldModule,
-    FormsModule,
+    MatToolbarModule,
   ],
 })
 export class MaterialModule {}
