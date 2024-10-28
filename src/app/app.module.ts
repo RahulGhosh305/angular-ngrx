@@ -26,7 +26,7 @@ import { counterReducer } from "./store/counter.reducers";
     BrowserAnimationsModule,
     MaterialModule,
     StoreDevtoolsModule.instrument({
-      maxAge: 25, // Retains last 25 states
+      maxAge: false, // Retains last 25 states
       logOnly: !isDevMode(), // Restrict extension to log-only mode
     }),
   ],
