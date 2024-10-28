@@ -1,0 +1,32 @@
+<div class="card">
+  <mat-card>
+    <mat-card-content>
+      <!-- Counter Input Field -->
+      <mat-form-field appearance="fill" style="width: 100%">
+        <mat-label>Counter Input</mat-label>
+        <input
+          matInput
+          type="number"
+          [(ngModel)]="counterInput"
+          placeholder="Enter a number"
+        />
+      </mat-form-field>
+
+      <!-- Action Type Selection Field -->
+      <mat-form-field appearance="fill" style="width: 100%; margin-top: 1em">
+        <mat-label>Action Type</mat-label>
+        <mat-select [(ngModel)]="types" placeholder="Select an action">
+          <mat-option value="add">Add</mat-option>
+          <mat-option value="remove">Remove</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+
+    <!-- Button Section -->
+    <div style="display: flex; justify-content: center; margin-top: 1em">
+      <button mat-raised-button color="primary" (click)="OnCustomIncrement()">
+        Custom Increment (+)
+      </button>
+    </div>
+  </mat-card>
+</div>
