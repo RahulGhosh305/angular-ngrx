@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { InitialStateProps } from "../../models/counter.model";
+import { CounterStateModel } from "../../models/counter.model";
 
-const getCounterState = createFeatureSelector<InitialStateProps>(
+const getCounterState = createFeatureSelector<CounterStateModel>(
   "counterReducerProvider"
 );
 

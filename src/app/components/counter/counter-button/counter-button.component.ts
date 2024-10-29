@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { InitialStateProps } from "src/app/models/counter.model";
+import { CounterStateModel } from "src/app/models/counter.model";
 
 import {
   decrement,
@@ -16,7 +16,7 @@ import {
 })
 export class CounterButtonComponent implements OnInit {
   constructor(
-    private store: Store<{ counterReducerProvider: InitialStateProps }>
+    private store: Store<{ counterReducerProvider: CounterStateModel }>
   ) {}
 
   ngOnInit() {}

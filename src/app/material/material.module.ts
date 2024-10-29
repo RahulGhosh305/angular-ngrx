@@ -4,6 +4,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatFormFieldModule,
+  MatGridListModule,
   MatInputModule,
   MatSelectModule,
   MatToolbarModule,
@@ -19,6 +20,7 @@ import {
     MatSelectModule,
     MatFormFieldModule,
     MatToolbarModule,
+    MatGridListModule,
   ],
 })
 export class MaterialModule {}

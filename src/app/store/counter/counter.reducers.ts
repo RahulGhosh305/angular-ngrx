@@ -6,11 +6,11 @@ import {
   rename,
   reset,
 } from "./counter.actions";
-import { initialState } from "./counter.state";
+import { counterState } from "./counter.state";
 
 // Fix the name _state to state for correct reference
 const _counterReducer = createReducer(
-  initialState,
+  counterState,
   on(increment, (state) => {
     return {
       ...state,

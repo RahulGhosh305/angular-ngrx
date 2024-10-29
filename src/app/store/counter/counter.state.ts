@@ -1,6 +1,6 @@
-import { InitialStateProps } from "../../models/counter.model";
+import { CounterStateModel } from "../../models/counter.model";
 
-export const initialState: InitialStateProps = {
+export const counterState: CounterStateModel = {
   count: 0,
   text: "Something",
 };

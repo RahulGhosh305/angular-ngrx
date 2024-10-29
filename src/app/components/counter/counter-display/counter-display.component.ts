@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Subscription } from "rxjs";
-import { InitialStateProps } from "src/app/models/counter.model";
+import { CounterStateModel } from "src/app/models/counter.model";
 import { getCount, getText } from "src/app/store/counter/counter.selector";
 
 @Component({
@@ -17,15 +17,15 @@ export class CounterDisplayComponent implements OnInit, OnDestroy {
 
   // countData$: Observable<InitialState>;
   constructor(
-    private store: Store<{ counterReducerProvider: InitialStateProps }>
+    private store: Store<{ counterReducerProvider: CounterStateModel }>
   ) {}
 
   ngOnInit() {
-    this.counterSubscribe = this.store.select(getCount).subscribe((data) => {
-      this.displayCount = data;
+    this.counterSubscribe = this.store.select(getCount).subscribe((count) => {
+      this.displayCount = count;
     });
-    this.textSubscribe = this.store.select(getText).subscribe((data) => {
-      this.displayText = data;
+    this.textSubscribe = this.store.select(getText).subscribe((text) => {
+      this.displayText = text;
     });
     // Another Way set Data
     // this.countData$ = this.store.select("counter");

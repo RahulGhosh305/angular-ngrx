@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Subscription } from "rxjs";
-import { InitialStateProps } from "src/app/models/initial-state";
+import { CounterStateModel } from "src/app/models/counter.model";
 import { customIncrement } from "src/app/store/counter/counter.actions";
 import { getText } from "src/app/store/counter/counter.selector";
 
@@ -17,12 +17,12 @@ export class CustomIncrementComponent implements OnInit, OnDestroy {
   counterSubscribe!: Subscription;
 
   constructor(
-    private store: Store<{ counterReducerProvider: InitialStateProps }>
+    private store: Store<{ counterReducerProvider: CounterStateModel }>
   ) {}
 
   ngOnInit() {
-    this.counterSubscribe = this.store.select(getText).subscribe((data) => {
-      this.displayText = data;
+    this.counterSubscribe = this.store.select(getText).subscribe((text) => {
+      this.displayText = text;
     });
   }
 
