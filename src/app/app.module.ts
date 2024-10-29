@@ -14,6 +14,8 @@ import { HomeComponent } from "./components/home/home.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { MaterialModule } from "./material/material.module";
 import { globalReducer } from "./store/global/globalReducers";
+import { AddBlogComponent } from './components/add-blog/add-blog.component';
+import { DialogContentComponent } from './components/dialog-content/dialog-content.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { globalReducer } from "./store/global/globalReducers";
     MenuComponent,
     BlogComponent,
     HomeComponent,
+    AddBlogComponent,
+    DialogContentComponent,
   ],
   imports: [
     BrowserModule,

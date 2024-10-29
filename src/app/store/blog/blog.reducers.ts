@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { getBlogItems } from "./blog.action";
+import { addBlog, getBlogItems } from "./blog.action";
 import { blogState } from "./blog.state";
 
 const _blogReducers = createReducer(
@@ -7,6 +7,12 @@ const _blogReducers = createReducer(
   on(getBlogItems, (state) => {
     return {
       ...state,
+    };
+  }),
+  on(addBlog, (state, action) => {
+    return {
+      ...state,
+      items: [...state.items, action.payload],
     };
   })
 );
