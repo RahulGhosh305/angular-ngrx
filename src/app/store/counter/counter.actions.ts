@@ -7,3 +7,4 @@ export const customIncrement = createAction(
   "customIncrement",
   props<{ payload: number; types: string }>()
 );
+export const rename = createAction("rename");

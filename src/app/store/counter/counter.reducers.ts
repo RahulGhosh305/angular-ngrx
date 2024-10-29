@@ -3,6 +3,7 @@ import {
   customIncrement,
   decrement,
   increment,
+  rename,
   reset,
 } from "./counter.actions";
 import { initialState } from "./counter.state";
@@ -35,6 +36,12 @@ const _counterReducer = createReducer(
         action.types === "add"
           ? state.count + action.payload
           : state.count - action.payload,
+    };
+  }),
+  on(rename, (state) => {
+    return {
+      ...state,
+      text: "NgRx",
     };
   })
 );

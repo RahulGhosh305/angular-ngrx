@@ -4,6 +4,7 @@ import { InitialStateProps } from "src/app/models/initial-state";
 import {
   decrement,
   increment,
+  rename,
   reset,
 } from "../../store/counter/counter.actions";
 
@@ -29,5 +30,9 @@ export class CounterButtonComponent implements OnInit {
 
   OnReset() {
     this.store.dispatch(reset());
+  }
+
+  OnRenameProject() {
+    this.store.dispatch(rename());
   }
 }
