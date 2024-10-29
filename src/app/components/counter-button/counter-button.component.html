@@ -1,12 +1,21 @@
-<div style="margin-top: 50px">
-  <button mat-raised-button color="primary" (click)="OnIncrement()">
-    Increment (+)
-  </button>
-  <button mat-raised-button color="warm" (click)="OnReset()">Reset</button>
-  <button mat-raised-button color="accent" (click)="OnDecrement()">
-    Decrement (-)
-  </button>
-  <button mat-raised-button color="secondary" (click)="OnRenameProject()">
-    Rename Project
-  </button>
+<div style="display: flex; justify-content: center">
+  <div>
+    <h1 style="text-align: center; color: brown">{{ title }}</h1>
+    <div style="margin-top: 50px">
+      <button mat-raised-button color="primary" (click)="OnIncrement()">
+        Increment (+)
+      </button>
+      <button mat-raised-button color="warm" (click)="OnReset()">Reset</button>
+      <button mat-raised-button color="accent" (click)="OnDecrement()">
+        Decrement (-)
+      </button>
+      <button mat-raised-button color="secondary" (click)="OnRenameProject()">
+        Rename Project
+      </button>
+    </div>
+    <app-counter-display></app-counter-display>
+  </div>
+</div>
+<div style="display: flex; justify-content: center">
+  <app-custom-increment></app-custom-increment>
 </div>
