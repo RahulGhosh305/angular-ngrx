@@ -7,12 +7,15 @@ import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { BlogComponent } from "./components/blog/blog.component";
 import { CounterButtonComponent } from "./components/counter-button/counter-button.component";
 import { CounterDisplayComponent } from "./components/counter-display/counter-display.component";
 import { CustomIncrementComponent } from "./components/custom-increment/custom-increment.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { MaterialModule } from "./material/material.module";
 import { counterReducer } from "./store/counter/counter.reducers";
+
+import { HomeComponent } from "./components/home/home.component";
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { counterReducer } from "./store/counter/counter.reducers";
     CounterDisplayComponent,
     CustomIncrementComponent,
     MenuComponent,
+    BlogComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
