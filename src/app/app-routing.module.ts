@@ -1,7 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { BlogComponent } from "./components/blog/blog.component";
-import { CounterButtonComponent } from "./components/counter-button/counter-button.component";
+
+import { CounterButtonComponent } from "./components/counter/counter-button/counter-button.component";
 import { HomeComponent } from "./components/home/home.component";
 
 const routes: Routes = [

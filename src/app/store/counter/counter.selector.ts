@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { InitialStateProps } from "../../models/initial-state";
+import { InitialStateProps } from "../../models/counter.model";
 
 const getCounterState = createFeatureSelector<InitialStateProps>(
   "counterReducerProvider"

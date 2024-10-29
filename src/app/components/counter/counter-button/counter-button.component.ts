@@ -1,12 +1,13 @@
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { InitialStateProps } from "src/app/models/initial-state";
+import { InitialStateProps } from "src/app/models/counter.model";
+
 import {
   decrement,
   increment,
   rename,
   reset,
-} from "../../store/counter/counter.actions";
+} from "src/app/store/counter/counter.actions";
 
 @Component({
   selector: "app-counter-button",

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Subscription } from "rxjs";
-import { InitialStateProps } from "src/app/models/initial-state";
+import { InitialStateProps } from "src/app/models/counter.model";
 import { getCount, getText } from "src/app/store/counter/counter.selector";
 
 @Component({
