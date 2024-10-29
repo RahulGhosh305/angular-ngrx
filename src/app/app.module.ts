@@ -10,9 +10,9 @@ import { AppComponent } from "./app.component";
 import { CounterButtonComponent } from "./components/counter-button/counter-button.component";
 import { CounterDisplayComponent } from "./components/counter-display/counter-display.component";
 import { CustomIncrementComponent } from "./components/custom-increment/custom-increment.component";
+import { MenuComponent } from "./components/menu/menu.component";
 import { MaterialModule } from "./material/material.module";
-import { counterReducer } from "./store/counter.reducers";
-import { MenuComponent } from './components/menu/menu.component';
+import { counterReducer } from "./store/counter/counter.reducers";
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { MenuComponent } from './components/menu/menu.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ firstReducerProvider: counterReducer }),
+    StoreModule.forRoot({ counterReducerProvider: counterReducer }),
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,

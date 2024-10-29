@@ -1,4 +1,4 @@
-import { InitialStateProps } from "../models/initial-state";
+import { InitialStateProps } from "../../models/initial-state";
 
 export const initialState: InitialStateProps = {
   count: 0,

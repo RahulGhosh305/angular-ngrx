@@ -1,8 +1,8 @@
 import { createFeatureSelector, createSelector } from "@ngrx/store";
-import { InitialStateProps } from "../models/initial-state";
+import { InitialStateProps } from "../../models/initial-state";
 
 const getCounterState = createFeatureSelector<InitialStateProps>(
-  "firstReducerProvider"
+  "counterReducerProvider"
 );
 
 export const getCount = createSelector(getCounterState, (state) => {

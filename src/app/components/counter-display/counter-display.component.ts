@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Subscription } from "rxjs";
 import { InitialStateProps } from "src/app/models/initial-state";
-import { getCount, getText } from "src/app/store/all-state.selector";
+import { getCount, getText } from "src/app/store/counter/counter.selector";
 
 @Component({
   selector: "app-counter-display",
@@ -17,7 +17,7 @@ export class CounterDisplayComponent implements OnInit, OnDestroy {
 
   // countData$: Observable<InitialState>;
   constructor(
-    private store: Store<{ firstReducerProvider: InitialStateProps }>
+    private store: Store<{ counterReducerProvider: InitialStateProps }>
   ) {}
 
   ngOnInit() {

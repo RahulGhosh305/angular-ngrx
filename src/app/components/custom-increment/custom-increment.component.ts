@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { Subscription } from "rxjs";
 import { InitialStateProps } from "src/app/models/initial-state";
-import { getText } from "src/app/store/all-state.selector";
-import { customIncrement } from "src/app/store/all.actionTypes";
+import { customIncrement } from "src/app/store/counter/counter.actions";
+import { getText } from "src/app/store/counter/counter.selector";
 
 @Component({
   selector: "app-custom-increment",
@@ -17,7 +17,7 @@ export class CustomIncrementComponent implements OnInit, OnDestroy {
   counterSubscribe!: Subscription;
 
   constructor(
-    private store: Store<{ firstReducerProvider: InitialStateProps }>
+    private store: Store<{ counterReducerProvider: InitialStateProps }>
   ) {}
 
   ngOnInit() {

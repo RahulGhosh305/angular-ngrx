@@ -4,8 +4,8 @@ import {
   decrement,
   increment,
   reset,
-} from "./all.actionTypes";
-import { initialState } from "./all.state";
+} from "./counter.actions";
+import { initialState } from "./counter.state";
 
 // Fix the name _state to state for correct reference
 const _counterReducer = createReducer(
